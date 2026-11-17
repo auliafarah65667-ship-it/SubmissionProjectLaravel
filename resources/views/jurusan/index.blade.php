@@ -1,5 +1,8 @@
-
 <h1>Daftar Jurusan</h1>
+
+<a href="{{ route('jurusan.create') }}"> Tambah Jurusan</a>
+
+<br><br>
 
 <table border="1" cellpadding="6">
     <tr>

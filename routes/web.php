@@ -24,6 +24,14 @@ Route::get('/products', [ProductsController::class, 'index']);
 
 Route::get('/products/{id}', [ProductsController::class, 'show']);
 
-Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/jurusan', [JurusanController::class, 'index'])
+    ->name('jurusan.index');
 
-Route::get('/jurusan/{id}', [JurusanController::class, 'show']);
+Route::get('/jurusan/create', [JurusanController::class, 'create'])
+    ->name('jurusan.create');
+
+Route::post('/jurusan', [JurusanController::class, 'store'])
+    ->name('jurusan.store');
+
+Route::get('/jurusan/{id}', [JurusanController::class, 'show'])
+    ->name('jurusan.show');
